@@ -1,3 +1,0 @@
-# Belgium
-## Brugge
-## Bruxelles

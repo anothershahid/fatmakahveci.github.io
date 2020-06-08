@@ -1,2 +1,0 @@
-# USA
-## Los Angeles
