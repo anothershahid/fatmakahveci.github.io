@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fatma Kahveci</title>
-    <link>https://fatmakahveci.com/</link>
-    <description>Recent content on Fatma Kahveci</description>
+    <title>Bioinformatics on Fatma Kahveci</title>
+    <link>https://fatmakahveci.com/categories/bioinformatics/</link>
+    <description>Recent content in Bioinformatics on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://fatmakahveci.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fatmakahveci.com/categories/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
