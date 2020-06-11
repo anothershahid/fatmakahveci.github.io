@@ -3,6 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://fatmakahveci.com/tags/bacteria/</loc>
+  </url>
+  
+  <url>
     <loc>https://fatmakahveci.com/categories/bioinformatics/</loc>
   </url>
   
@@ -48,6 +52,14 @@
   
   <url>
     <loc>https://fatmakahveci.com/</loc>
+  </url>
+  
+  <url>
+    <loc>https://fatmakahveci.com/tags/gene-transfer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://fatmakahveci.com/post/gene_transfer_in_bacteria/</loc>
   </url>
   
   <url>
