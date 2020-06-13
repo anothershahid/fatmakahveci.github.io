@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/austria/</loc>
+    <loc>https://fatmakahveci.com/travel/austria/</loc>
   </url>
   
   <url>
@@ -27,7 +27,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/belgium/</loc>
+    <loc>https://fatmakahveci.com/travel/belgium/</loc>
   </url>
   
   <url>
@@ -44,6 +44,10 @@
   
   <url>
     <loc>https://fatmakahveci.com/categories/bioinformatics/</loc>
+  </url>
+  
+  <url>
+    <loc>https://fatmakahveci.com/bioinformatics/</loc>
   </url>
   
   <url>
@@ -95,7 +99,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/covid19/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/covid19/</loc>
   </url>
   
   <url>
@@ -103,7 +107,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/czechia/</loc>
+    <loc>https://fatmakahveci.com/travel/czechia/</loc>
   </url>
   
   <url>
@@ -111,7 +115,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/denmark/</loc>
+    <loc>https://fatmakahveci.com/travel/denmark/</loc>
   </url>
   
   <url>
@@ -139,7 +143,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/england/</loc>
+    <loc>https://fatmakahveci.com/travel/england/</loc>
   </url>
   
   <url>
@@ -147,11 +151,11 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/dict_en_es/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/dict_en_es/</loc>
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/dict_en_tr/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/dict_en_tr/</loc>
   </url>
   
   <url>
@@ -159,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/estonia/</loc>
+    <loc>https://fatmakahveci.com/travel/estonia/</loc>
   </url>
   
   <url>
@@ -179,11 +183,11 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/gene_transfer_in_bacteria/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/gene_transfer_in_bacteria/</loc>
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/germany/</loc>
+    <loc>https://fatmakahveci.com/travel/germany/</loc>
   </url>
   
   <url>
@@ -195,7 +199,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/holland/</loc>
+    <loc>https://fatmakahveci.com/travel/holland/</loc>
   </url>
   
   <url>
@@ -207,7 +211,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/italy/</loc>
+    <loc>https://fatmakahveci.com/travel/italy/</loc>
   </url>
   
   <url>
@@ -219,7 +223,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/japan/</loc>
+    <loc>https://fatmakahveci.com/travel/japan/</loc>
   </url>
   
   <url>
@@ -231,7 +235,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/latvia/</loc>
+    <loc>https://fatmakahveci.com/travel/latvia/</loc>
   </url>
   
   <url>
@@ -287,7 +291,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/poland/</loc>
+    <loc>https://fatmakahveci.com/travel/poland/</loc>
   </url>
   
   <url>
@@ -299,7 +303,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/portugal/</loc>
+    <loc>https://fatmakahveci.com/travel/portugal/</loc>
   </url>
   
   <url>
@@ -311,10 +315,6 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/</loc>
-  </url>
-  
-  <url>
     <loc>https://fatmakahveci.com/tags/riga/</loc>
   </url>
   
@@ -323,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/russia/</loc>
+    <loc>https://fatmakahveci.com/travel/russia/</loc>
   </url>
   
   <url>
@@ -351,11 +351,11 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/links_for_newbies/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/links_for_newbies/</loc>
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/spain/</loc>
+    <loc>https://fatmakahveci.com/travel/spain/</loc>
   </url>
   
   <url>
@@ -363,7 +363,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/sweden/</loc>
+    <loc>https://fatmakahveci.com/travel/sweden/</loc>
   </url>
   
   <url>
@@ -371,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/switzerland/</loc>
+    <loc>https://fatmakahveci.com/travel/switzerland/</loc>
   </url>
   
   <url>
@@ -407,11 +407,15 @@
   </url>
   
   <url>
+    <loc>https://fatmakahveci.com/travel/</loc>
+  </url>
+  
+  <url>
     <loc>https://fatmakahveci.com/tags/turin/</loc>
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/turkey/</loc>
+    <loc>https://fatmakahveci.com/travel/turkey/</loc>
   </url>
   
   <url>
@@ -419,7 +423,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/ukraine/</loc>
+    <loc>https://fatmakahveci.com/travel/ukraine/</loc>
   </url>
   
   <url>
@@ -427,7 +431,7 @@
   </url>
   
   <url>
-    <loc>https://fatmakahveci.com/post/usa/</loc>
+    <loc>https://fatmakahveci.com/travel/usa/</loc>
   </url>
   
   <url>
