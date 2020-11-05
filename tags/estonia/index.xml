@@ -5,18 +5,14 @@
     <link>https://fatmakahveci.com/tags/estonia/</link>
     <description>Recent content in estonia on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/tags/estonia/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/tags/estonia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Estonia</title>
       <link>https://fatmakahveci.com/travel/estonia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/estonia/</guid>
-      <description>Talinn</description>
+      <description>A trip to the capital of Estonia, Talinn.</description>
     </item>
     
   </channel>

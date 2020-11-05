@@ -5,11 +5,7 @@
     <link>https://fatmakahveci.com/tags/en-tr/</link>
     <description>Recent content in en-tr on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/tags/en-tr/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/tags/en-tr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>English-Turkish Bioinformatics Dictionary</title>
       <link>https://fatmakahveci.com/bioinformatics/dict_en_tr/</link>

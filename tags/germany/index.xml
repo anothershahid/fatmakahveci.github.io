@@ -5,18 +5,14 @@
     <link>https://fatmakahveci.com/tags/germany/</link>
     <description>Recent content in germany on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/tags/germany/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/tags/germany/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Germany</title>
       <link>https://fatmakahveci.com/travel/germany/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/germany/</guid>
-      <description>Berlin, Cologne, Dusseldorf, Munich</description>
+      <description>Berlin, Cologne, Dusseldorf, Munich.</description>
     </item>
     
   </channel>

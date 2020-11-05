@@ -5,18 +5,14 @@
     <link>https://fatmakahveci.com/</link>
     <description>Recent content on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Austria</title>
       <link>https://fatmakahveci.com/travel/austria/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/austria/</guid>
-      <description>Vienna</description>
+      <description>A trip to the capital of Austria, Vienna.</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/belgium/</guid>
-      <description>Brugge, Bruxelles</description>
+      <description>A trip to a romantic city (Brugge) and to the capital of Belgium (Brussels)</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/czechia/</guid>
-      <description>Brno</description>
+      <description>A trip to the Mendel&amp;rsquo;s Brno.</description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/denmark/</guid>
-      <description>Copenhagen</description>
+      <description>A trip to the capital of Denmark, Kopenhagen.</description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/england/</guid>
-      <description>London</description>
+      <description>A trip to the capital of England, London.</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/estonia/</guid>
-      <description>Talinn</description>
+      <description>A trip to the capital of Estonia, Talinn.</description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/germany/</guid>
-      <description>Berlin, Cologne, Dusseldorf, Munich</description>
+      <description>Berlin, Cologne, Dusseldorf, Munich.</description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/holland/</guid>
-      <description>Amsterdam</description>
+      <description>A trip to the capital of Holland, Amsterdam.</description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/japan/</guid>
-      <description>Tokyo</description>
+      <description>A trip to the capital of Japan, Tokyo.</description>
     </item>
     
     <item>
@@ -160,7 +156,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/portugal/</guid>
-      <description>Lisboa</description>
+      <description>A trip to the capital of Portugal, Lisboa.</description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/russia/</guid>
-      <description>Moscow, Saint Petersburg</description>
+      <description>A trip to the capital of Russia and city of palaces (Moscow and Saint Petersburg).</description>
     </item>
     
     <item>
@@ -223,7 +219,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/ukraine/</guid>
-      <description>A trip to the capital of Ukraine&amp;hellip;</description>
+      <description>A trip to the capital of Ukraine, Kiev.</description>
     </item>
     
     <item>
@@ -232,7 +228,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fatmakahveci.com/travel/usa/</guid>
-      <description>Los Angeles</description>
+      <description>A trip to the city of angels, Los Angeles.</description>
     </item>
     
   </channel>

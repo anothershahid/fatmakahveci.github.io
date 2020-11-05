@@ -5,11 +5,7 @@
     <link>https://fatmakahveci.com/categories/bioinformatics/</link>
     <description>Recent content in Bioinformatics on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/categories/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/categories/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Covid19</title>
       <link>https://fatmakahveci.com/bioinformatics/covid19/</link>

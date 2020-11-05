@@ -5,11 +5,7 @@
     <link>https://fatmakahveci.com/tags/newbies/</link>
     <description>Recent content in newbies on Fatma Kahveci</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://fatmakahveci.com/tags/newbies/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://fatmakahveci.com/tags/newbies/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Some links for bioinformatics newbies</title>
       <link>https://fatmakahveci.com/bioinformatics/links_for_newbies/</link>
