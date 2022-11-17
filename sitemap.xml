@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</loc>
+  </url><url>
     <loc>https://fatmakahveci.com/tags/albania/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/travel/albania/</loc>
@@ -66,7 +68,7 @@
   </url><url>
     <loc>https://fatmakahveci.com/tags/covid19/</loc>
   </url><url>
-    <loc>https://fatmakahveci.com/bioinformatics/covid19/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/map_covid/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/tags/czechia/</loc>
   </url><url>
@@ -224,7 +226,7 @@
   </url><url>
     <loc>https://fatmakahveci.com/tags/sinop/</loc>
   </url><url>
-    <loc>https://fatmakahveci.com/bioinformatics/links_for_newbies/</loc>
+    <loc>https://fatmakahveci.com/bioinformatics/links_for_bioinformatics_newbies/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/tags/s%C3%B6zl%C3%BCk/</loc>
   </url><url>
