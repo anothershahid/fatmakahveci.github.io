@@ -7,16 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://fatmakahveci.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</guid>
-      <description>Bacterial Strain Identification Bacterial species are highly adaptable to their environment in harsh conditions. It makes bacterial infections of great concern due to their relevance to the high mortality, morbidity rates, and cost of treatments. It is critical to discriminate bacterial isolates at the strain level in transmission surveillance during infectious disease outbreaks.
-WGS-based approaches pave the way to identify and characterize bacterial species and strains. It is feasible with increasing available data size and ease of their applicability through SNVs among strains, as a group of closely related isolates that share critical characteristics.</description>
-    </item>
-    
-    <item>
       <title>Albania</title>
       <link>https://fatmakahveci.com/travel/albania/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -32,6 +22,15 @@ WGS-based approaches pave the way to identify and characterize bacterial species
       
       <guid>https://fatmakahveci.com/travel/austria/</guid>
       <description>Vienna</description>
+    </item>
+    
+    <item>
+      <title>Bacterial Strain Identification</title>
+      <link>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</guid>
+      <description>Here is an intro to bacterial strain identification.</description>
     </item>
     
     <item>

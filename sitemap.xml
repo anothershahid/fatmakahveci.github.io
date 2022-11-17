@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</loc>
-  </url><url>
     <loc>https://fatmakahveci.com/tags/albania/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/travel/albania/</loc>
@@ -19,6 +17,8 @@
     <loc>https://fatmakahveci.com/travel/austria/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/tags/bacteria/</loc>
+  </url><url>
+    <loc>https://fatmakahveci.com/bioinformatics/bacterial_strain_identification/</loc>
   </url><url>
     <loc>https://fatmakahveci.com/tags/balikesir/</loc>
   </url><url>
