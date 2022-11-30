@@ -4,22 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tree traversal - Fatma Kahveci</title>
+	<title>Binary tree traversal - Fatma Kahveci</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Tree traversal">
-		<meta property="og:title" content="Tree traversal" />
-<meta property="og:description" content="Tree traversal" />
+	<meta name="description" content="Binary tree traversal">
+		<meta property="og:title" content="Binary tree traversal" />
+<meta property="og:description" content="Binary tree traversal" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fatmakahveci.com/coding/binary_tree_traversal/" /><meta property="article:section" content="coding" />
 
 
 
 
-		<meta itemprop="name" content="Tree traversal">
-<meta itemprop="description" content="Tree traversal">
+		<meta itemprop="name" content="Binary tree traversal">
+<meta itemprop="description" content="Binary tree traversal">
 
-<meta itemprop="wordCount" content="6">
-<meta itemprop="keywords" content="python,coding,software,algorithm,tree traversal,dfs,bfs," />
+<meta itemprop="wordCount" content="83">
+<meta itemprop="keywords" content="python,coding,software,algorithm,binary tree,tree traversal,dfs,bfs,depth-first search,breadth-first search," />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -89,7 +89,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Tree traversal</h1>
+			<h1 class="post__title">Binary tree traversal</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Fatma Kahveci</span>
 </div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/coding/" rel="category">Coding</a>
@@ -97,8 +97,19 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<p><img src="/img/binary_tree_traversal.png" alt="binary_tree_traversal"></p>
-<h2 id="breadth-first-search-algorithm">Breadth-First Search Algorithm</h2>
-<h2 id="depth-first-search-algorithm">Depth-First Search Algorithm</h2>
+<h2 id="1-breadth-first-search-algorithm">1. Breadth-First Search Algorithm</h2>
+<p>Level 0 -&gt; Level 1 -&gt; &hellip; -&gt; Level n</p>
+<p>F D J B E G K A C I H</p>
+<h2 id="2-depth-first-search-algorithm">2. Depth-First Search Algorithm</h2>
+<h3 id="21-preorder">2.1. Preorder</h3>
+<p>Root -&gt; Left -&gt; Right</p>
+<p>F D B A C E J G I H K</p>
+<h3 id="22-inorder">2.2. Inorder</h3>
+<p>Left -&gt; Root -&gt; Right</p>
+<p>A B C D E F G H I J K</p>
+<h3 id="23-postorder">2.3. Postorder</h3>
+<p>Left -&gt; Right -&gt; Root</p>
+<p>A C B E D H I G K J F</p>
 
 		</div>
 		<footer class="post__footer">
@@ -119,6 +130,9 @@
 			<a class="tags__link btn" href="/tags/algorithm/" rel="tag">algorithm</a>
 		</li>
 		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/binary-tree/" rel="tag">binary tree</a>
+		</li>
+		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/tree-traversal/" rel="tag">tree traversal</a>
 		</li>
 		<li class="tags__item">
@@ -126,6 +140,12 @@
 		</li>
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/bfs/" rel="tag">bfs</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/depth-first-search/" rel="tag">depth-first search</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/breadth-first-search/" rel="tag">breadth-first search</a>
 		</li>
 	</ul>
 </div>
@@ -136,14 +156,8 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/coding/when_to_use/" rel="prev">
+		<a class="pager__link" href="/coding/zen_of_python/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">When to use data structures and algorithms</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/coding/zen_of_python/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
 			<p class="pager__title">The Zen of python</p>
 		</a>
 	</div>
@@ -295,11 +309,13 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/berat/" title="berat">berat (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/berlin/" title="berlin">berlin (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bfs/" title="bfs">bfs (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/binary-tree/" title="binary tree">binary tree (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bioinformatician/" title="bioinformatician">bioinformatician (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bioinformatics/" title="bioinformatics">bioinformatics (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bioinform%C3%A1tica/" title="bioinformática">bioinformática (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/biyoinformatik/" title="biyoinformatik">biyoinformatik (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/bordeaux/" title="bordeaux">bordeaux (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/breadth-first-search/" title="breadth-first search">breadth-first search (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/brno/" title="brno">brno (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/brugge/" title="brugge">brugge (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/brussels/" title="brussels">brussels (1)</a>
@@ -314,6 +330,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/czechia/" title="czechia">czechia (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/data-structure/" title="data structure">data structure (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/denmark/" title="denmark">denmark (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/depth-first-search/" title="depth-first search">depth-first search (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dfs/" title="dfs">dfs (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/diccionario/" title="diccionario">diccionario (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dictionary/" title="dictionary">dictionary (2)</a>
