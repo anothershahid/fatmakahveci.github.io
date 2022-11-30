@@ -285,5 +285,14 @@
       <description>Los Angeles and New York</description>
     </item>
     
+    <item>
+      <title>When to use data structures and algorithms</title>
+      <link>https://fatmakahveci.com/coding/when_to_use/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatmakahveci.com/coding/when_to_use/</guid>
+      <description>When to use data structures and algorithms</description>
+    </item>
+    
   </channel>
 </rss>
