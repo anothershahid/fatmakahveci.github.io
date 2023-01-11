@@ -14,11 +14,10 @@
 
 
 
-
 		<meta itemprop="name" content="Django for beginners">
 <meta itemprop="description" content="Django for beginners">
 
-<meta itemprop="wordCount" content="1662">
+<meta itemprop="wordCount" content="3755">
 <meta itemprop="keywords" content="python,coding,django,web framework," />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -110,24 +109,24 @@
 <p><img src="/img/django_file_system.png" alt="django_file_system"></p>
 <hr>
 <h2 id="hello-world">Hello World</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deactivate <span style="color:#75715e"># makes sure you are not in an existing venv</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ deactivate <span style="color:#75715e"># makes sure you are not in an existing venv</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">`</span>&lt;dir_for_project&gt;<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>mkdir <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>cd <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>$ cd <span style="color:#e6db74">`</span>&lt;dir_for_project&gt;<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>$ mkdir <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>$ cd <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>python -m venv <span style="color:#e6db74">`</span>&lt;venv_name&gt;<span style="color:#e6db74">`</span>
-</span></span><span style="display:flex;"><span>source <span style="color:#e6db74">`</span>&lt;venv_name&gt;/bin/activate<span style="color:#e6db74">`</span> <span style="color:#75715e"># venv should be activated</span>
+</span></span><span style="display:flex;"><span>$ python -m venv <span style="color:#e6db74">`</span>&lt;venv_name&gt;<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>$ source <span style="color:#e6db74">`</span>&lt;venv_name&gt;/bin/activate<span style="color:#e6db74">`</span> <span style="color:#75715e"># venv should be activated</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># (&lt;project_dir&gt;) $ &gt;&gt; # means venv is working.</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>pip install django <span style="color:#75715e"># `&lt;version&gt;` can be specified</span>
-</span></span><span style="display:flex;"><span>python -m django version <span style="color:#75715e"># checks if it is installed</span>
+</span></span><span style="display:flex;"><span>$ pip install django <span style="color:#75715e"># `&lt;version&gt;` can be specified</span>
+</span></span><span style="display:flex;"><span>$ python -m django version <span style="color:#75715e"># checks if it is installed</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Do not forget to add `.` at the end.</span>
-</span></span><span style="display:flex;"><span>python django-admin startproject <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span> .
+</span></span><span style="display:flex;"><span>$ python django-admin startproject <span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span> .
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
-</span></span><span style="display:flex;"><span>python manage.py migrate <span style="color:#75715e"># It doesn&#39;t matter now, but it avoids the warnings. Normally, it migrates the changes in db. Here, it created an SQLite database and migrated its built-in apps.</span>
+</span></span><span style="display:flex;"><span>$ python manage.py migrate <span style="color:#75715e"># It doesn&#39;t matter now, but it avoids the warnings. Normally, it migrates the changes in db. Here, it created an SQLite database and migrated its built-in apps.</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
 </span></span></code></pre></div><p>Now you have the following file structure:</p>
 <pre tabindex="0"><code class="language-code" data-lang="code">├── `&lt;project_name&gt;` # use like `&lt;project_name&gt;.urls` to import anything inside.
@@ -139,9 +138,9 @@
 ├── db.sqlite3 # python manage.py migrate
 ├── manage.py # interacts with the project.
 └── `&lt;venv_name&gt;`/
-</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export DJANGO_SETTINGS_MODULE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>.settings
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export DJANGO_SETTINGS_MODULE<span style="color:#f92672">=</span><span style="color:#e6db74">`</span>&lt;project_name&gt;<span style="color:#e6db74">`</span>.settings
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>python manage.py runserver <span style="color:#75715e"># runs Django&#39;s local web server.</span>
+</span></span><span style="display:flex;"><span>$ python manage.py runserver <span style="color:#75715e"># runs Django&#39;s local web server.</span>
 </span></span></code></pre></div><p>Go to <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a> in your browser.</p>
 <ul>
 <li>8080 is the default value, which is changable.</li>
@@ -156,11 +155,13 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py startapp <span style="color:#e6db74">`</span>&lt;app_name&gt;<span style="color:#e6db74">`</span> <span style="color:#75715e"># creates an app</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python manage.py startapp <span style="color:#e6db74">`</span>&lt;app_name&gt;<span style="color:#e6db74">`</span> <span style="color:#75715e"># creates an app</span>
 </span></span></code></pre></div><ul>
-<li>You need to configure project to include the app. (<code>&lt;project_name&gt;</code>/settings.py)</li>
+<li>You need to configure project to include the app.</li>
 </ul>
-<pre tabindex="0"><code class="language-code" data-lang="code">INSTALLED_APPS = [
+<pre tabindex="0"><code class="language-code" data-lang="code"># `&lt;project_name&gt;`/settings.py file
+
+INSTALLED_APPS = [
     &#34;django.contrib.admin&#34;,
     &#34;django.contrib.auth&#34;,
     &#34;django.contrib.contenttypes&#34;,
@@ -170,7 +171,7 @@
     &#34;`&lt;app_name&gt;`&#34;,  # new
 ]
 </code></pre><ul>
-<li>An app can live anywhere on your <code>_Python path_</code>.</li>
+<li>An app can live anywhere on your <code>_python path_</code>.</li>
 <li>Apps are pluggable so you can use an app in multiple projects.</li>
 </ul>
 <hr>
@@ -182,21 +183,19 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">home</span>(request):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;Hello world!&#34;</span>)
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># &lt;project_name&gt;/urls.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># add path to your app</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> include, path
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
 </span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;admin/&#39;</span>, admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>urls),
-</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, include(<span style="color:#e6db74">&#39;blog_app.urls&#39;</span>)), <span style="color:#75715e"># new</span>
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, include(<span style="color:#e6db74">&#39;app_name.urls&#39;</span>)), <span style="color:#75715e"># new, add path to your app, change blog_app into &lt;app_name&gt;</span>
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;/urls.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># add path to index &#39;&#39;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> . <span style="color:#f92672">import</span> views
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, views<span style="color:#f92672">.</span>home, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;home&#39;</span>)
+</span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, views<span style="color:#f92672">.</span>home, name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;home&#39;</span>) <span style="color:#75715e"># add path to index &#39;&#39;</span>
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><hr>
 <h3 id="django-admin-vs-managepy"><code>django-admin</code> vs. <code>manage.py</code></h3>
@@ -229,7 +228,7 @@
 <li>The default primary key is an <code>id</code> column, which consists of an integer that is incremented automatically.</li>
 <li>The Django object-relational mapper (ORM) is compatible with <code>MySQL</code>, <code>PostgreSQL</code>, <code>SQLite</code>, <code>Oracle</code>, and <code>MariaDB</code>.
 <ul>
-<li>You can define the DB in <code>settings.py</code>.</li>
+<li>You can define the database in <code>settings.py</code>.</li>
 </ul>
 </li>
 </ul>
@@ -243,7 +242,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __str__(self):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.&lt;</span>field_name<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.&lt;</span>field_name<span style="color:#f92672">&gt;</span> <span style="color:#f92672">+</span> self<span style="color:#f92672">.&lt;</span>field_name<span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#960050;background-color:#1e0010">&lt;</span><span style="color:#a6e22e">Model_name</span><span style="color:#f92672">&gt;</span>(models<span style="color:#f92672">.</span>Model):
@@ -251,33 +250,149 @@
 </span></span><span style="display:flex;"><span>  
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">def</span> __str__(self):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.&lt;</span>field_name<span style="color:#f92672">&gt;</span>
-</span></span></code></pre></div><p>( <strong>Model Field Types (1+):</strong> <code>AutoField</code>, <code>BigAutoField</code>, <code>BigIntegerField</code>, <code>BinaryField</code>, <code>BooleanField</code>, <code>CharField</code>, <code>DateField</code>, <code>DateTimeField</code>, <code>DecimalField</code>, <code>DurationField</code>, <code>EmailField</code>, <code>FileField</code>, <code>FilePathField</code>, <code>FloatField</code>, <code>ImageField</code>, <code>IntegerField</code>, <code>GenericIpAddressField</code>, <code>NullBooleanField</code>, <code>PositiveIntegerField</code>, <code>PositiveSmallIntegerField</code>, <code>SlugField</code>, <code>SmallIntegerField</code>, <code>TextField</code>, <code>TimeField</code>, <code>URLField</code>, <code>ForeignKey</code>, <code>ManyToManyField</code>, <code>OneToOneField</code>. )</p>
-<ul>
-<li>
-<p>When you change something in your model, run <code>python manage.py makemigrations &lt;app_name&gt;</code> to create migrations for those changes.</p>
-</li>
-<li>
-<p><code>python manage.py migrate</code> applies those changes to the database. It reads <code>001_initial.py</code>. It creates SQL commands and runs them.</p>
-</li>
-<li>
+</span></span></code></pre></div><p><strong>Model Field Types (1+):</strong> <code>AutoField</code>, <code>BigAutoField</code>, <code>BigIntegerField</code>, <code>BinaryField</code>, <code>BooleanField</code>, <code>CharField</code>, <code>DateField</code>, <code>DateTimeField</code>, <code>DecimalField</code>, <code>DurationField</code>, <code>EmailField</code>, <code>FileField</code>, <code>FilePathField</code>, <code>FloatField</code>, <code>ImageField</code>, <code>IntegerField</code>, <code>GenericIpAddressField</code>, <code>NullBooleanField</code>, <code>PositiveIntegerField</code>, <code>PositiveSmallIntegerField</code>, <code>SlugField</code>, <code>SmallIntegerField</code>, <code>TextField</code>, <code>TimeField</code>, <code>URLField</code>, <code>ForeignKey</code>, <code>ManyToManyField</code>, <code>OneToOneField</code>.</p>
+<h3 id="migrations">Migrations</h3>
+<p><code>$ python manage.py makemigrations &lt;app_name&gt;</code> applies changes in your model.</p>
+<p><code>$ python manage.py migrate</code> applies changes to the database. It reads <code>001_initial.py</code>, and creates and run SQL commands.</p>
 <p><code>$ python manage.py shell</code> is different than the UNIX shell.</p>
-</li>
-<li>
-<p><strong>Note:</strong> If you get kind of messed up, you can remove <code>&lt;file&gt;.sqlite</code> and run the migrations again.</p>
-</li>
+<p><code>$ python manage.py showmigrations</code> displays the details.</p>
+<p>Migrations is a logical description of what the tables should look like. They are guided by the installed applications listed in <code>settings.py</code>.</p>
+<p><code>migrate</code> command reads all the <code>migrations</code> folders in the application folders and creates/evolves the tables in the database (i.e. <code>db.sqlite3</code>).</p>
+<ul>
+<li><strong>Note:</strong> If you get kind of messed up, you can remove <code>&lt;file&gt;.sqlite</code> and run the migrations again.</li>
 </ul>
-<hr>
+<p>Migration class typically contains two important sequences:</p>
+<ul>
+<li><strong>Dependencies</strong> refer to the previous migration.</li>
+<li><strong>Operations</strong> refer to the actions performed in the given migration.</li>
+</ul>
+<h3 id="create-read-update-and-delete-crud-operations">Create, Read, Update, and Delete (CRUD) operations</h3>
+<p>SQL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- Create a database --
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">User</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;id&#34;</span> serial <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;first_name&#34;</span> varchar(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;last_name&#34;</span> varchar(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Create a record
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#66d9ef">User</span>(id, first_name, last_name) <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Brown&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Retrieve a user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Update a user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">UPDATE</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">SET</span> first_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bob&#34;</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Delete a user
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Change in database
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">User</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">COLUMN</span> job VARCHAR(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Delete table
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">User</span>;
+</span></span></code></pre></div><p>Django</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.db <span style="color:#f92672">import</span> models
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a database</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># defining a primary key is not required</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># ssn = models.IntegerField(primary_key = True) # optional</span>
+</span></span><span style="display:flex;"><span>  first_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>  last_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># website = models.URLField()</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a record</span>
+</span></span><span style="display:flex;"><span>new_user <span style="color:#f92672">=</span> User(id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Brown&#34;</span>)
+</span></span><span style="display:flex;"><span>new_user<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve a user</span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>get(id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update a user</span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>get(id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>first_name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Bob&#34;</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>save()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Delete a user</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(id<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>delete()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Change in database</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>  first_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>  last_name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>  job <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Delete table</span>
+</span></span><span style="display:flex;"><span>migrations<span style="color:#f92672">.</span>DeleteModel(<span style="color:#e6db74">&#34;User&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># more operations</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>values() <span style="color:#75715e"># SELECT *</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(first_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Bob&#39;</span>)<span style="color:#f92672">.</span>values() <span style="color:#75715e"># retrieve</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(first_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Bob&#39;</span>)<span style="color:#f92672">.</span>delete() <span style="color:#75715e"># delete</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>filter(first_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Bob&#39;</span>)<span style="color:#f92672">.</span>update(last_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Lopez&#39;</span>) <span style="color:#75715e"># change the column</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>values()<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;first_name&#39;</span>) <span style="color:#75715e"># sort by ascending order</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>values()<span style="color:#f92672">.</span>order_by(<span style="color:#e6db74">&#39;-last_name&#39;</span>) <span style="color:#75715e"># sort by descending order</span>
+</span></span></code></pre></div><h3 id="1-one-to-one-relationship">1. One-to-one relationship</h3>
+<p>SQL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;school&#34;</span> (<span style="color:#e6db74">&#34;school_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;name&#34;</span> varchar(<span style="color:#ae81ff">30</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>; 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;principal&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTOINCREMENT, <span style="color:#e6db74">&#34;email&#34;</span> varchar(<span style="color:#ae81ff">40</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#34;school_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;school&#34;</span> (<span style="color:#e6db74">&#34;school_id&#34;</span>) <span style="color:#66d9ef">DEFERRABLE</span> <span style="color:#66d9ef">INITIALLY</span> <span style="color:#66d9ef">DEFERRED</span>);
+</span></span></code></pre></div><p>Django</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">School</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>  school_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(primary_key <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>  name <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>CharField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">30</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Principal</span>(models<span style="color:#f92672">.</span>Model):
+</span></span><span style="display:flex;"><span>  school_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>OneToOneField(School, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+</span></span><span style="display:flex;"><span>  email <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>EmailField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">40</span>)
+</span></span></code></pre></div><h3 id="2-one-to-many-relationship">2. One-to-many relationship</h3>
+<p>SQL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;subject&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;credits&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;teacher&#34;</span> (<span style="color:#e6db74">&#34;teacher_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;email&#34;</span> varchar(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#34;subject_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;subject&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span>) <span style="color:#66d9ef">DEFERRABLE</span> <span style="color:#66d9ef">INITIALLY</span> <span style="color:#66d9ef">DEFERRED</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> <span style="color:#e6db74">&#34;teacher_subject_id&#34;</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;teacher&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span>);
+</span></span></code></pre></div><p>Django</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Subject</span>(models<span style="color:#f92672">.</span>Model): 
+</span></span><span style="display:flex;"><span>    subject_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(primary_key <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>) 
+</span></span><span style="display:flex;"><span>    credits <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>IntegerField() 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teacher</span>(models<span style="color:#f92672">.</span>Model): 
+</span></span><span style="display:flex;"><span>    teacher_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(primary_key<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>) 
+</span></span><span style="display:flex;"><span>    subject_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>ForeignKey(subject, on_delete<span style="color:#f92672">=</span>models<span style="color:#f92672">.</span>CASCADE)
+</span></span><span style="display:flex;"><span>    email <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>EmailField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>) 
+</span></span></code></pre></div><h3 id="3-many-to-many-relationship">3. Many-to-many relationship</h3>
+<p>SQL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;teacher&#34;</span> (<span style="color:#e6db74">&#34;teacher_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;email&#34;</span> varchar(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;subject&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, <span style="color:#e6db74">&#34;credits&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#e6db74">&#34;subject_teacher&#34;</span> (<span style="color:#e6db74">&#34;id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTOINCREMENT, <span style="color:#e6db74">&#34;subject_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;subject&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span>) <span style="color:#66d9ef">DEFERRABLE</span> <span style="color:#66d9ef">INITIALLY</span> <span style="color:#66d9ef">DEFERRED</span>, <span style="color:#e6db74">&#34;teacher_id&#34;</span> integer <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">REFERENCES</span> <span style="color:#e6db74">&#34;teacher&#34;</span> (<span style="color:#e6db74">&#34;teacher_id&#34;</span>) <span style="color:#66d9ef">DEFERRABLE</span> <span style="color:#66d9ef">INITIALLY</span> <span style="color:#66d9ef">DEFERRED</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">UNIQUE</span> <span style="color:#66d9ef">INDEX</span> <span style="color:#e6db74">&#34;subject_teacher_subject_id_teacher_id&#34;</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;subject_teacher&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span>, <span style="color:#e6db74">&#34;teacher_id&#34;</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> <span style="color:#e6db74">&#34;subject_teacher_subject_id&#34;</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;subject_teacher&#34;</span> (<span style="color:#e6db74">&#34;subject_id&#34;</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> <span style="color:#e6db74">&#34;subject_teacher_teacher_id&#34;</span> <span style="color:#66d9ef">ON</span> <span style="color:#e6db74">&#34;subject_teacher&#34;</span> (<span style="color:#e6db74">&#34;teacher_id&#34;</span>);
+</span></span></code></pre></div><p>Django</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Teacher</span>(models<span style="color:#f92672">.</span>Model): 
+</span></span><span style="display:flex;"><span>    teacher_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(primary_key<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    email <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>EmailField(max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Subject</span>(models<span style="color:#f92672">.</span>Model): 
+</span></span><span style="display:flex;"><span>    subject_id <span style="color:#f92672">=</span> models<span style="color:#f92672">.</span>IntegerField(primary_key <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>) 
+</span></span><span style="display:flex;"><span>    credits <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>IntegerField() 
+</span></span><span style="display:flex;"><span>    teacher <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>ManyToManyField(Teacher) 
+</span></span></code></pre></div><hr>
 <h2 id="2-view">2. View</h2>
 <ul>
 <li>
-<p>Views determine what content is displayed on a given page.</p>
+<p>It determines what content is displayed on a given page.</p>
+</li>
+<li>
+<p>It interacts with both the model and template layers.</p>
 </li>
 <li>
 <p>There are three ways to write a view in Django:</p>
 <ul>
-<li><strong>1. Function-based view</strong> takes an <code>HttpRequest</code> object and returns an <code>HttpResponse</code> object, both of which are defined in <code>django.http</code> module.
+<li><strong>1. Function-based view</strong> takes an <code>HttpRequest</code> object and returns an <code>HttpResponse</code> object. Both are defined in <code>django.http</code> module.
 <ul>
-<li>An instance of <code>HttpRequest</code> class
+<li>The view function receives the request data in an instance of class <code>HttpRequest</code>.
 <ul>
 <li>All the data coming in.</li>
 <li>Data you see in your browser debugger about what data was sent to the server, that all ends up somewhere in this object.</li>
@@ -285,13 +400,14 @@
 </li>
 <li>An instance of <code>HttpResponse</code> class
 <ul>
+<li>It contains the actual contents of default content_type as &ldquo;text/HTML&rdquo; and the status code.</li>
 <li>Something that we create inside of our view. It might be simply text (HTML). (OR)</li>
 <li>You send it all back. It might be a redirect object, go to a different page.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><strong>2. Class-based view</strong> allows for much greater code reusability and keeps things DRY (Don&rsquo;t Repeat Yourself). It inherits from the <code>View</code> class.</li>
+<li><strong>2. Class-based view</strong> allows for much greater code reusability and keeps things DRY (Don&rsquo;t Repeat Yourself). It inherits from the <code>View</code> class. You always add <code>as_view()</code> at the end of the view name, when using class-based views.</li>
 <li><strong>3. Generic class-based view</strong> handles common use cases, such as creating a new object, forms, list views, pagination, etc. They are built-in.</li>
 </ul>
 </li>
@@ -332,15 +448,12 @@
 </span></span><span style="display:flex;"><span>    path(<span style="color:#e6db74">&#39;&#39;</span>, include(<span style="color:#e6db74">&#39;&lt;app_name&gt;.urls&#39;</span>)),
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><h3 id="url-routing">URL Routing</h3>
-<ul>
-<li>Django looks at the incoming request URL and uses <code>urls.py</code> to select a view.</li>
-<li>The view from <code>views.py</code>
+<p>Django looks at the incoming request URL and uses <code>urls.py</code> to select a view.</p>
+<p>The view from <code>views.py</code></p>
 <ul>
 <li>Handle any incoming data in the request and copy it to the database through the model.</li>
 <li>Retrieve data to put on the page from the database through the model.</li>
 <li>Produce the HTML that will become the response and return it to the browser.</li>
-</ul>
-</li>
 </ul>
 <h3 id="a-view-without-any-python-code">A view without any Python code</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.views.generic <span style="color:#f92672">import</span> TemplateView
@@ -352,7 +465,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># urls.py</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.urls <span style="color:#f92672">import</span> path
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [path(<span style="color:#e6db74">&#39;&lt;func&gt;&#39;</span>, <span style="color:#f92672">&lt;</span>app<span style="color:#f92672">&gt;.&lt;</span>func<span style="color:#f92672">&gt;</span>)]
+</span></span><span style="display:flex;"><span>urlpatterns <span style="color:#f92672">=</span> [ path(<span style="color:#e6db74">&#39;&lt;func&gt;&#39;</span>, <span style="color:#f92672">&lt;</span>app<span style="color:#f92672">&gt;.&lt;</span>func<span style="color:#f92672">&gt;</span>) ]
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># views.py</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
 </span></span><span style="display:flex;"><span>
@@ -398,8 +511,13 @@
 <li>You can include the static files, such as <code>blog.css</code> with <code>{% static %}</code>.</li>
 </ul>
 </li>
+<li>Keep your templates in <code>templates</code> folder.</li>
 </ul>
-<h3 id="url---view---template">URL -&gt; View -&gt; Template</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt; My name is {{ user_name }}. &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">&lt;</span>function_name<span style="color:#f92672">&gt;</span>(request):
+</span></span><span style="display:flex;"><span>  data <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;user_name&#34;</span> : <span style="color:#e6db74">&#34;Bob&#34;</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> render( request, <span style="color:#e6db74">&#34;&lt;template&gt;.html&#34;</span>, {data : <span style="color:#e6db74">&#34;data&#34;</span>} )
+</span></span></code></pre></div><h3 id="url---view---template">URL -&gt; View -&gt; Template</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># urls.py</span>
 </span></span><span style="display:flex;"><span>path(<span style="color:#e6db74">&#39;game/&lt;slug:guess&gt;&#39;</span>, views<span style="color:#f92672">.</span>GameView<span style="color:#f92672">.</span>as_view())
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># views.py</span>
@@ -444,7 +562,9 @@
 </span></span><span style="display:flex;"><span>{% else %}
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span>&gt;No nuts.&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>{% endif %}
-</span></span></code></pre></div><h3 id="django-template-language-dtl">Django Template Language (DTL)</h3>
+</span></span></code></pre></div><h3 id="jinja2">Jinja2</h3>
+<p>Jinja is a popular template engine in python. Special placeholders in the template allow writing code similar to python syntax.</p>
+<h3 id="django-template-language-dtl">Django Template Language (DTL)</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## Template Tags/Code</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Substitution</span>
@@ -463,16 +583,19 @@
 </span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> block content <span style="color:#f92672">%</span>}
 </span></span><span style="display:flex;"><span>{<span style="color:#f92672">%</span> endblock <span style="color:#f92672">%</span>}
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># terminal</span>
-</span></span><span style="display:flex;"><span>mkdir templates
+</span></span><span style="display:flex;"><span>$ mkdir templates
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- templates/home.html --&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;Homepage&lt;/<span style="color:#f92672">h1</span>&gt;
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># &lt;project_name&gt;/settings.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># update the given line below</span>
 </span></span><span style="display:flex;"><span>TEMPLATES <span style="color:#f92672">=</span> [
 </span></span><span style="display:flex;"><span>  {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;DIRS&#39;</span>: [os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;templates&#39;</span>)], <span style="color:#75715e"># new</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;BACKEND&#39;</span>: <span style="color:#e6db74">&#39;django.template.backends.django.DjangoTemplates&#39;</span>, <span style="color:#75715e"># path to a template engine class</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;DIRS&#39;</span>: [os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(BASE_DIR, <span style="color:#e6db74">&#39;templates&#39;</span>)], <span style="color:#75715e"># defines a list of directories where the engine should look for template source files, in search order</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;APP_DIRS&#39;</span>: <span style="color:#66d9ef">True</span>, <span style="color:#75715e"># tells whether the engine should look for templates inside installed applications</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;OPTIONS&#39;</span>: {
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># contains backend-specific settings</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;environment&#34;</span>: <span style="color:#e6db74">&#34;your-app.jinja2.environment&#34;</span>
+</span></span><span style="display:flex;"><span>    },
 </span></span><span style="display:flex;"><span>  },
 </span></span><span style="display:flex;"><span>]
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;/views.py</span>
@@ -498,14 +621,404 @@
 <ul>
 <li>Visit <a href="https://docs.djangoproject.com/en/4.1/ref/templates/builtins/">Django&rsquo;s documentation</a></li>
 </ul>
-<hr>
-<h2 id="4-url-dispatcher">4. URL Dispatcher</h2>
-<hr>
-<h2 id="django-tips">Django Tips</h2>
+<h3 id="extending-templates">Extending Templates</h3>
+<p>Django has a minimal templating language for adding links and basic logic in our templates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># base.html
+</span></span><span style="display:flex;"><span># Repeated on every page (header, footer, etc.).
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Title&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>      {% block content %}
+</span></span><span style="display:flex;"><span>      {% endblock %}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% extends &#39;base.html&#39; %}
+</span></span><span style="display:flex;"><span>{% block content %}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">h1</span>&gt;{{ Name }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>{% endblock %}
+</span></span></code></pre></div><hr>
+<h2 id="4-urls">4. URLs</h2>
+<p>A URL pattern <code>path(&lt;string&gt;, &lt;view&gt;, &lt;name&gt;)</code> allows you to map URLs to views.</p>
+<p><code>User &lt;-&gt; Django &lt;-&gt; urls.py (project) &lt;-&gt; urls.py (app) &lt;-&gt; views.py</code></p>
+<p>If the user requests the homepage, represented by the empty string <code>&quot;&quot;</code>, then use the view called <code>homePageView</code>.</p>
+<p><code>URLConf</code> maps request to the appropriate view function which returns the correct data. It is to design URLs for an app. It maps URL path expressions to python functions.</p>
+<h3 id="reading-the-url">Reading the URL</h3>
 <ul>
-<li>Always add a name to urls.</li>
+<li><code>&lt;website_url&gt;/views/&lt;app&gt;</code></li>
+<li><code>&lt;website_url&gt;/views/&lt;app&gt;?&lt;key&gt;=&lt;value&gt;(parameters GET)</code></li>
+<li><code>&lt;website_url&gt;/views/&lt;app&gt;/&lt;url_path_parameter&gt;</code></li>
+</ul>
+<h2 id="three-patterns-for-views-in-urlspy">Three patterns for views (in urls.py)</h2>
+<ol>
+<li>Requests are routed to a predefined class from Django itself.</li>
+<li>Requests are routed to a function in <code>views.py</code> that takes the HTTP request as a parameter and returns a response.</li>
+<li>Requests are routed to a class in <code>views.py</code> that has <code>get()</code> and <code>post()</code> methods that take the HTTP request as a parameter and return a response.</li>
+</ol>
+<ul>
+<li><em>URL Mapping / Reversing</em> allows us to generate links from one page to another.</li>
+<li><code>reverse()</code> builds URLs by their name and pass optional parameters.</li>
 </ul>
 <hr>
+<h2 id="update-settingspy">Update <code>settings.py</code></h2>
+<p>Introduce <code>&lt;app_name&gt;</code> to <code>&lt;project_name&gt;</code>:</p>
+<ul>
+<li>Add this line to the first_line of <code>INSTALLED_APPS = [...]</code> in <code>&lt;project_name&gt;/settings.py</code>. The order is important!
+<code>'&lt;app_name&gt;.apps.&lt;AppNameConfig&gt;',</code></li>
+</ul>
+<hr>
+<h2 id="admin">Admin</h2>
+<ul>
+<li><code>django.contrib.admin</code> app provides authorization and authentication system by default.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python manage.py createsuperuser
+</span></span></code></pre></div><p>Go to <a href="http://127.0.0.1:8080/admin">http://127.0.0.1:8080/admin</a> in your browser.</p>
+<p><code>is_staff = True</code> can log in to the admin interface.</p>
+<h3 id="adding-models-to-the-administration-site">Adding models to the administration site</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># admin.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib <span style="color:#f92672">import</span> admin
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> .models <span style="color:#f92672">import</span> Post
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>admin<span style="color:#f92672">.</span>site<span style="color:#f92672">.</span>register(Post)
+</span></span></code></pre></div><h3 id="requestuser"><code>request.user</code></h3>
+<ul>
+<li>It is an object of <code>django.contrib.auth.models.User</code> class.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>is_authenticated():
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Do something for logged_in users.</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Do something for anonymous users.</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.template <span style="color:#f92672">import</span> loader
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">index</span>(request):
+</span></span><span style="display:flex;"><span>  template <span style="color:#f92672">=</span> loader<span style="color:#f92672">.</span>get_template(<span style="color:#e6db74">&#39;app/index.html&#39;</span>)
+</span></span><span style="display:flex;"><span>  context <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> HttpResponse(template<span style="color:#f92672">.</span>render(context, request))
+</span></span></code></pre></div><h3 id="users">Users</h3>
+<ul>
+<li>Users in Django are python objects.</li>
+</ul>
+<p>a. <code>Superuser</code>s possess permission to add, change, or delete other users. Also, they perform operations on all the data. A <code>super user</code> is a <code>staff user</code> by default.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python manage.py createsuperuser --username<span style="color:#f92672">=</span>&lt;name&gt; --email<span style="color:#f92672">=</span>&lt;email&gt;
+</span></span></code></pre></div><p>b. <code>Staff user</code>s access Django admin interface. They cannot automatically get the permission to create, delete, update, and read data in the Django admin. It must be given explicitly.
+c. <code>User</code>s are not authorized to use the admin site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.models <span style="color:#f92672">import</span> User
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user <span style="color:#f92672">=</span> User<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create_user(<span style="color:#e6db74">&#39;&lt;name&gt;&#39;</span>, <span style="color:#e6db74">&#39;&lt;email&gt;&#39;</span>, <span style="color:#e6db74">&#39;&lt;password&gt;&#39;</span>) <span style="color:#75715e"># creates a user</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>is_staff <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#75715e"># makes the user staff</span>
+</span></span><span style="display:flex;"><span>user<span style="color:#f92672">.</span>save()
+</span></span></code></pre></div><h3 id="permissions">Permissions</h3>
+<p>By default, all users get the add, change, view, and delete permissions on all models.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;.add_&lt;model_name&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;.view_&lt;model_name&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;.change_&lt;model_name&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &lt;app_name&gt;.delete_&lt;model_name&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.decorators <span style="color:#f92672">import</span> login_required
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.contrib.auth.decorators <span style="color:#f92672">import</span> user_passes_test
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.core.exceptions <span style="color:#f92672">import</span> PermissionDenied
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> django.http <span style="color:#f92672">import</span> HttpResponse
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">&lt;</span>function_name<span style="color:#f92672">&gt;</span>(request):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>has_perm(<span style="color:#e6db74">&#39;&lt;app_name&gt;.view_&lt;model_name&gt;&#39;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> PermissionDenied()
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## anonymous users are not allowed</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">&lt;</span>function_name<span style="color:#f92672">&gt;</span>(request):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>user<span style="color:#f92672">.</span>is_anonymous():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">raise</span> PermissionDenied()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## only logged users are allowed</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@login_required</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">&lt;</span>function_name<span style="color:#f92672">&gt;</span>(request):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> HttpResponse(<span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## restricted access depending on the function&#39;s result (True/False)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#f92672">&lt;</span>permission_func<span style="color:#f92672">&gt;</span>(user):
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>is_authenticated() <span style="color:#f92672">and</span> user<span style="color:#f92672">.</span>has_perm(<span style="color:#e6db74">&#34;&lt;app_name&gt;.&lt;function_name&gt;&#34;</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@user_passes_test</span>(<span style="color:#f92672">&lt;</span>permission_func<span style="color:#f92672">&gt;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">change_ctg</span>(request):
+</span></span></code></pre></div><h4 id="permissions-in-template">Permissions in template</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{% comment %}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    {% if user.is_authenticated %} <span style="color:#75715e">&lt;!-- OR perms.&lt;app_name&gt;.&lt;func_name&gt; --&gt;</span>
+</span></span><span style="display:flex;"><span>      { # render here }
+</span></span><span style="display:flex;"><span>    {% endif %}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><hr>
+<h2 id="httprequest">HttpRequest</h2>
+<ul>
+<li><code>GET</code> method provides the data from the model or delete a certain instance.</li>
+<li><code>POST</code> method requested data performs an insert or update operation.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.shortcuts <span style="color:#f92672">import</span> render  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">myview</span>(request):  
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;GET&#39;</span>: <span style="color:#75715e"># read or delete on the model</span>
+</span></span><span style="display:flex;"><span>      val <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>GET[<span style="color:#e6db74">&#39;key&#39;</span>] 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> request<span style="color:#f92672">.</span>method <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;POST&#39;</span>: <span style="color:#75715e"># insert or update on the model </span>
+</span></span><span style="display:flex;"><span>      val <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>POST[<span style="color:#e6db74">&#39;key&#39;</span>]
+</span></span></code></pre></div><p>Your server process a request by sending a request as WSGI object to Django.</p>
+<p>When the request is being passed to the view:</p>
+<ul>
+<li>Web Server Gateway Interface (WSGI) app / handler
+<ul>
+<li>Django has its own handler.</li>
+<li>Standard interface for web apps&rsquo; objects in python</li>
+<li>Exists so that all Python web frameworks interact with the same type of object when processing a request</li>
+<li>We can change WSGI app to
+<ul>
+<li>response wo going through Django</li>
+<li>prevent unnecessary processing</li>
+<li>access to the raw data from the request</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Middlewares
+<ul>
+<li>They are executed for every request.</li>
+<li>They are called between layers of Django code.</li>
+<li>They are called in a specific order.</li>
+<li>We change them for
+<ul>
+<li>accessing common object on the view (i.e. user)</li>
+<li>specific request manipulations and integrations (logging, error catching, etc.)</li>
+<li>pre / post processing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>View</li>
+</ul>
+<h2 id="httpresponse">HttpResponse</h2>
+<p>When the view is responding the request:</p>
+<ul>
+<li>View</li>
+<li>Middlewares</li>
+<li>Context processors
+<ul>
+<li>Why we use
+<ul>
+<li>for redundant and fallback variables that will be used in the template</li>
+<li>to prevent repetitive view code and facilitate testing</li>
+</ul>
+</li>
+<li>Called before the template rendering</li>
+<li>Allow adding variables to the template&rsquo;s context, making them available at the &ldquo;HTML&rdquo;</li>
+<li>Are simple, pure functions</li>
+<li>Work well together with Middlewares</li>
+</ul>
+</li>
+<li>Response done</li>
+</ul>
+<hr>
+<h2 id="queryset-api"><code>QuerySet</code> API</h2>
+<p><code>QuerySet</code> API interacts with the database.</p>
+<p>A <code>QuerySet</code> represents a collection of objects from the database.</p>
+<ul>
+<li><code>&lt;Model&gt;.objects.all()</code> := <code>SELECT * FROM &lt;Model&gt;;</code></li>
+<li><code>&lt;Model&gt;.objects.filter(&lt;criteria&gt;)</code> := <code>SELECT * FROM &lt;Model&gt; WHERE &lt;criteria&gt;;</code></li>
+<li><code>&lt;Model&gt;.objects.filter(&lt;field&gt;__startswith='c')</code> := <code>SELECT * FROM &lt;Model&gt; WHERE &lt;field&gt; LIKE &quot;c%&quot;;</code></li>
+<li><code>&lt;Model&gt;.objects.exclude(start_date__gt=datetime.date(2022, 2, 2), header='Header')</code> := <code>SELECT * FROM &lt;Model&gt; WHERE NOT (start_date &gt; '2022-2-2' AND header = 'Header')</code></li>
+<li><code>&lt;Model&gt;.objects.exclude(start_date__gt=datetime.date(2022, 2, 2)).exclude(header='Header')</code> := <code>SELECT ... WHERE NOT start_date &gt; '2022-2-2' AND NOT header = 'Header'</code></li>
+</ul>
+<p><strong>Reference:</strong> <a href="https://docs.djangoproject.com/en/4.1/ref/models/querysets/">Django documentation</a></p>
+<hr>
+<h2 id="database-configurations">Database configurations</h2>
+<p>The default configuration uses an SQLite database.</p>
+<h3 id="mysql">MySQL</h3>
+<p><code>mysqlclient</code> will be installed.</p>
+<ul>
+<li><em>Address</em> is where the db is running.</li>
+<li><em>Port number</em></li>
+<li><em>Database name</em> is that you want to connect to.</li>
+<li><em>Database driver</em> is responsible for mapping all the models and translating python queries into SQL instructions via the model.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># settings.py</span>
+</span></span><span style="display:flex;"><span>DATABASES <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;default&#39;</span> : {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;ENGINE&#39;</span> : <span style="color:#e6db74">&#39;Django.db.backends.mysql&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;OPTIONS&#39;</span> : {
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;read_default_file&#39;</span> : <span style="color:#e6db74">&#39;etc/mysql/my.cnf&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># my.cnf
+</span></span><span style="display:flex;"><span>[client]database = DB_NAME
+</span></span><span style="display:flex;"><span>host = localhost
+</span></span><span style="display:flex;"><span>user = DB_USER
+</span></span><span style="display:flex;"><span>password = DB_PASSWORD
+</span></span><span style="display:flex;"><span>default-character-set = utf8
+</span></span></code></pre></div><p>The initial setup requires you to manually create the database. (Database creation and permissions)</p>
+<hr>
+<h2 id="forms">Forms</h2>
+<p>Two base classes build forms in Django:</p>
+<ul>
+<li><code>Form</code> builds standard forms.</li>
+<li><code>ModelForm</code> builds forms tied to model instances.</li>
+</ul>
+<p>Forms can be used to collect data from end-users for</p>
+<ul>
+<li>Login and authentication</li>
+<li>Registration</li>
+<li>Online shopping, etc.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserForm</span>(forms<span style="color:#f92672">.</span>Form):
+</span></span><span style="display:flex;"><span>  user_name <span style="color:#f92672">=</span> form<span style="color:#f92672">.</span>CharField(label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Your name&#39;</span>, max_length<span style="color:#f92672">=</span><span style="color:#ae81ff">40</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user_name&#34;</span>&gt;User name: &lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user_name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;user_name&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">40</span> <span style="color:#a6e22e">required</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/user_name/&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ form }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span></code></pre></div><h3 id="form-fields-arguments-and-properties">Form fields, arguments, and properties</h3>
+<ul>
+<li>
+<p><strong>Form fields:</strong> <a href="https://docs.djangoproject.com/en/4.1/ref/forms/fields/">Django documentation</a></p>
+</li>
+<li>
+<p><strong>Form arguments:</strong></p>
+<ul>
+<li><code>required</code> := True (by default)</li>
+<li><code>label</code> := specify a label for the field</li>
+<li><code>initial</code> declares the initial value of form fields at runtime.</li>
+<li><code>help_text</code> is a descriptive text for the field.</li>
+<li><code>widget</code> defines how the content will be rendered as HTML.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django <span style="color:#f92672">import</span> forms
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COUNTRY <span style="color:#f92672">=</span> [ (<span style="color:#e6db74">&#39;italy&#39;</span>, <span style="color:#e6db74">&#39;Italy&#39;</span>), (<span style="color:#e6db74">&#39;turkey&#39;</span>, <span style="color:#e6db74">&#39;Turkey&#39;</span>), ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DemoForm</span>(forms<span style="color:#f92672">.</span>Form):
+</span></span><span style="display:flex;"><span>  age <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>IntegerField(required<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>  email <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>EmailField(initial<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo@bar.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  country <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>ChoiceField(choices<span style="color:#f92672">=</span>COUNTRY)
+</span></span><span style="display:flex;"><span>  publication_date <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>DateField(help_text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A valid date is required.&#34;</span>, widget<span style="color:#f92672">=</span>NumberInput(attrs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;type&#39;</span>:<span style="color:#e6db74">&#39;date&#39;</span>}))
+</span></span><span style="display:flex;"><span>  comment <span style="color:#f92672">=</span> forms<span style="color:#f92672">.</span>CharField(widget<span style="color:#f92672">=</span>forms<span style="color:#f92672">.</span>Textarea(attrs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;rows&#39;</span>:<span style="color:#ae81ff">5</span>}))
+</span></span></code></pre></div><ul>
+<li><strong>Field properties:</strong>
+<ul>
+<li><code>primary_key</code> := False (by default)</li>
+<li><code>default</code></li>
+<li><code>unique</code></li>
+<li><code>choices</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="form-api">Form API</h3>
+<p>Form API binds data to objects.</p>
+<hr>
+<h2 id="search">Search</h2>
+<ul>
+<li>Search Magic: <code>Form + Magic = Results</code></li>
+</ul>
+<h3 id="basic-search">Basic Search</h3>
+<h4 id="1-filtering">1. Filtering</h4>
+<h4 id="2-q-objects">2. Q Objects</h4>
+<h5 id="html-form">HTML Form</h5>
+<h3 id="full-text-search-postgres">Full-Text Search: <code>Postgres</code></h3>
+<ul>
+<li>
+<p>Django supports it.</p>
+</li>
+<li>
+<p>Search Documents that satisfy a Query and sort by Relevance.</p>
+</li>
+</ul>
+<h4 id="full-text-search-features">Full-Text Search Features</h4>
+<ul>
+<li>Rankings</li>
+<li>Indexing</li>
+<li>Phrase search</li>
+<li>Stop words</li>
+<li>Stemming</li>
+<li>Accent / multiple language support</li>
+<li>JSON [B] support</li>
+</ul>
+<h4 id="preprocessing">Preprocessing</h4>
+<ul>
+<li>Documents &gt; Tokens &gt; Lexemes (Normalized string)</li>
+</ul>
+<h4 id="postgresql-data-types">PostgreSQL Data Types</h4>
+<ul>
+<li>tsvector</li>
+<li>tsquery (normalized, match (@), and(&amp;), or (|) operators)</li>
+</ul>
+<h4 id="djangocontribpostgressearch">django.contrib.postgres.search</h4>
+<ul>
+<li>SearchVector: It can add multiple fields.</li>
+<li>SearchQuery: It can add stop and stemming words.</li>
+<li>SearchRank: Ranking on&hellip;</li>
+</ul>
+<h3 id="hosted">Hosted</h3>
+<h4 id="algolia-swiftype"><code>algolia</code>, <code>swiftype</code></h4>
+<h3 id="service">Service</h3>
+<h4 id="elastic-solr"><code>elastic</code>, <code>Solr</code></h4>
+<hr>
+<h2 id="cookies-and-sessions">Cookies and Sessions</h2>
+<h3 id="cookies">Cookies</h3>
+<ul>
+<li>A browser concept</li>
+<li>Cookies are essential to a session that establish and maintain sessions.</li>
+</ul>
+<h3 id="sessions">Sessions</h3>
+<ul>
+<li>A server concept</li>
+<li>We talk to the session with python code.</li>
+</ul>
+<h4 id="session-middleware">Session Middleware</h4>
+<ul>
+<li>It grabs every incoming request before it comes in to <code>urls.py</code> and it injects itself before <code>urls.py</code> runs.</li>
+<li>It uses the particular cookie value, grabs the particular session and associates it with our request.</li>
+</ul>
+<hr>
+<h2 id="test">Test</h2>
+<h3 id="writing-tests">Writing tests</h3>
+<ul>
+<li>It uses python&rsquo;s standard library module <code>unittest</code>, which defines tests using a class-based approach.</li>
+</ul>
+<h3 id="running-tests">Running tests</h3>
+<p><code>$ python manage.py test</code></p>
+<hr>
+<h2 id="sending-emails">Sending emails</h2>
+<ul>
+<li>A local SMTP server or an external SMTP server with the following is required.
+<ul>
+<li><code>EMAIL_HOST</code> := default: <code>localhost</code></li>
+<li><code>EMAIL_PORT</code> := default: 25</li>
+<li><code>EMAIL_HOST_USER</code> := server username</li>
+<li><code>EMAIL_HOST_PASSWORD</code> := server password</li>
+<li><code>EMAIL_USE_TLS</code> := whether to use Transport Layer Security (TLS)</li>
+<li><code>EMAIL_USE_SSL</code> := whether to use a secure TLS connection</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> django.core.mail <span style="color:#f92672">import</span> send_mail
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># send_mail(&lt;subject&gt;, &lt;message&gt;, &lt;sender&gt;, &lt;list_of_recipients&gt;)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># `fail_silently=False` raises an exception if the email can&#39;t be sent.</span>
+</span></span><span style="display:flex;"><span>send_mail(<span style="color:#e6db74">&#39;Django mail&#39;</span>, <span style="color:#e6db74">&#39;This e-mail was sent with Django.&#39;</span>, <span style="color:#e6db74">&#39;&lt;mail&gt;@gmail.com&#39;</span>, [<span style="color:#e6db74">&#39;&lt;mail&gt;@gmail.com&#39;</span>], fail_silently<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><hr>
 <p>*macOS</p>
 
 		</div>
@@ -806,7 +1319,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Fatma Kahveci.
+			&copy; 2023 Fatma Kahveci.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
